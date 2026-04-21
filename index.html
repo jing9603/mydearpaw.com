@@ -31,7 +31,7 @@
         </a>
         <div class="nav-actions">
           <a class="button button-secondary" href="#how-it-works">See how it works</a>
-          <a class="button button-primary" href="#cta">Try DearPaw</a>
+          <a class="button button-primary" href="#try-form" data-open-form="try-dearpaw">Try DearPaw</a>
         </div>
         <details class="mobile-menu">
           <summary class="mobile-menu-toggle" aria-label="Open navigation menu">
@@ -42,7 +42,7 @@
           <div class="mobile-menu-panel">
             <div class="mobile-menu-actions">
               <a class="button button-secondary" href="#how-it-works">See how it works</a>
-              <a class="button button-primary" href="#cta">Try DearPaw</a>
+              <a class="button button-primary" href="#try-form" data-open-form="try-dearpaw">Try DearPaw</a>
             </div>
           </div>
         </details>
@@ -67,7 +67,7 @@
               From vomiting frequently to peeing indoors after being house-trained, DearPaw helps you move from worry to action.
             </p>
             <div class="hero-actions reveal delay-4">
-              <a class="button button-primary" href="#cta">
+              <a class="button button-primary" href="#try-form" data-open-form="try-dearpaw">
                 <i class="fa-solid fa-heart-pulse"></i>
                 Try DearPaw
               </a>
@@ -231,11 +231,6 @@
                   Describe the concern in plain language and get calm guidance based on your pet's profile and history.
                 </p>
               </div>
-              <div class="mini-ui" aria-hidden="true">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-              </div>
             </article>
 
             <article class="flow-card">
@@ -248,12 +243,6 @@
                 <p>
                   Log symptoms, behaviors, and care actions so the story stays clear.
                 </p>
-              </div>
-              <div class="mini-chart" aria-hidden="true">
-                <div class="bar" style="height: 42%"></div>
-                <div class="bar" style="height: 72%"></div>
-                <div class="bar" style="height: 58%"></div>
-                <div class="bar" style="height: 84%"></div>
               </div>
             </article>
 
@@ -268,12 +257,6 @@
                   If you need a vet or trainer, share a clear timeline instead of piecing it together later, especially when symptom timing can change the diagnosis.
                 </p>
               </div>
-              <div class="mini-export" aria-hidden="true">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-              </div>
             </article>
 
             <article class="flow-card">
@@ -286,16 +269,6 @@
                 <p>
                   Over time, DearPaw helps you spot patterns and make better decisions.
                 </p>
-              </div>
-              <div class="mini-insight" aria-hidden="true">
-                <div class="insight-row">
-                  <span>Evening pacing</span>
-                  <strong>3x this week</strong>
-                </div>
-                <div class="insight-row">
-                  <span>Skin flare after treats</span>
-                  <strong>Possible pattern</strong>
-                </div>
               </div>
             </article>
           </div>
@@ -353,42 +326,20 @@
 
       <section id="why-dearpaw">
         <div class="container why-grid">
-          <div class="comparison">
-            <div class="comparison-head">
-              <div>What you need</div>
-              <div>Searching or basic logging</div>
-              <div>DearPaw</div>
+          <div class="comparison" aria-hidden="true">
+            <div class="comparison-top">
+              <span class="comparison-tag">Product snapshot</span>
+              <span class="comparison-note">DearPaw home experience</span>
             </div>
-            <div class="comparison-row">
-              <div>
-                <strong>Advice connected to your pet</strong>
-                <p>Guidance that stays grounded in profile and history.</p>
-              </div>
-              <div class="comparison-cell">Generic answers and scattered notes.</div>
-              <div class="comparison-cell highlight">Guidance that stays tied to your pet.</div>
-            </div>
-            <div class="comparison-row">
-              <div>
-                <strong>Tracking with a purpose</strong>
-                <p>Not just remembering details, but using them.</p>
-              </div>
-              <div class="comparison-cell">Information gets stored, but the story stays messy.</div>
-              <div class="comparison-cell highlight">A record that supports decisions and highlights what changed.</div>
-            </div>
-            <div class="comparison-row">
-              <div>
-                <strong>Help before the appointment</strong>
-                <p>Useful when you're still deciding whether you need outside help.</p>
-              </div>
-              <div class="comparison-cell">You piece things together later, often from memory.</div>
-              <div class="comparison-cell highlight">Bring a clearer, timing-accurate story into a vet or trainer conversation.</div>
+            <div class="comparison-frame">
+              <img src="assets/images/v2-home.png" alt="" />
             </div>
           </div>
 
           <div>
             <div class="section-heading">
               <span class="eyebrow">
-                <i class="fa-solid fa-sparkles"></i>
+                <i class="fa-solid fa-paw"></i>
                 Why DearPaw
               </span>
               <h2>More useful than searching. More practical than just tracking.</h2>
@@ -562,11 +513,11 @@
                   <p>Get calm guidance, keep a clear history, and take the next step with more confidence.</p>
                 </div>
                 <div class="hero-actions">
-                  <a class="button button-primary" href="mailto:hello@dearpaw.app?subject=Try%20DearPaw">
+                  <a class="button button-primary" href="#try-form" data-open-form="try-dearpaw">
                     <i class="fa-solid fa-heart"></i>
                     Try DearPaw
                   </a>
-                  <a class="button button-secondary" href="mailto:hello@dearpaw.app?subject=DearPaw%20Early%20Access">
+                  <a class="button button-secondary" href="mailto:info@mydearpaw.com?subject=DearPaw%20Early%20Access">
                     <i class="fa-solid fa-envelope"></i>
                     Get early access
                   </a>
@@ -629,11 +580,86 @@
 
     <footer>
       <div class="container footer-shell">
-        <div class="brand">
-          <img src="assets/images/dearpaw-logo-horizontal.png" alt="DearPaw" />
+        <div class="footer-brand-row">
+          <div class="brand">
+            <img src="assets/images/dearpaw-logo-horizontal.png" alt="DearPaw" />
+          </div>
         </div>
-        <div>Your first stop when something feels off with your pet.</div>
+        <div class="footer-copy">
+          <p>AI-powered pet care support for health and behavior concerns.</p>
+          <p>Designed to help pet owners track concerns and prepare for veterinary or training conversations.</p>
+        </div>
+        <div class="footer-meta">
+          <span>&copy; 2026 DearPaw. All rights reserved.</span>
+          <a href="mailto:info@mydearpaw.com">info@mydearpaw.com</a>
+          <span>Privacy Policy | Terms of Use</span>
+        </div>
       </div>
     </footer>
+
+    <div class="form-modal" id="try-form" hidden>
+      <div class="form-modal-backdrop" data-close-form></div>
+      <div class="form-modal-dialog" role="dialog" aria-modal="true" aria-label="Try DearPaw form">
+        <div class="form-modal-toolbar">
+          <button class="form-modal-close" type="button" aria-label="Close form" data-close-form>
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="form-modal-frame">
+          <iframe
+            class="airtable-embed"
+            src="https://airtable.com/embed/appuUthsHxwwwz49f/pagMh37DUcp7wMkIh/form"
+            frameborder="0"
+            width="100%"
+            height="533"
+            style="background: transparent; border: 1px solid #ccc;"
+            title="Try DearPaw form"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (() => {
+        const modal = document.getElementById("try-form");
+        if (!modal) return;
+
+        const openers = document.querySelectorAll("[data-open-form]");
+        const closers = modal.querySelectorAll("[data-close-form]");
+        const mobileMenu = document.querySelector(".mobile-menu");
+        const closeButton = modal.querySelector(".form-modal-close");
+
+        function openModal() {
+          modal.hidden = false;
+          document.body.classList.add("modal-open");
+          closeButton?.focus();
+        }
+
+        function closeModal() {
+          modal.hidden = true;
+          document.body.classList.remove("modal-open");
+        }
+
+        openers.forEach((trigger) => {
+          trigger.addEventListener("click", (event) => {
+            event.preventDefault();
+            if (mobileMenu) {
+              mobileMenu.removeAttribute("open");
+            }
+            openModal();
+          });
+        });
+
+        closers.forEach((trigger) => {
+          trigger.addEventListener("click", closeModal);
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && !modal.hidden) {
+            closeModal();
+          }
+        });
+      })();
+    </script>
   </body>
   </html>
