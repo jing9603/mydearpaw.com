@@ -90,18 +90,6 @@ a {
   width: auto;
 }
 
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-  font-size: 0.96rem;
-  color: var(--muted);
-}
-
-.nav-links a:hover,
-.nav-links a:focus-visible {
-  color: var(--teal);
-}
-
 .nav-actions {
   display: flex;
   align-items: center;
@@ -116,14 +104,14 @@ a {
 
 .mobile-menu-toggle {
   list-style: none;
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   display: grid;
   place-items: center;
-  border-radius: 14px;
+  border-radius: 12px;
   border: 1px solid rgba(22, 15, 41, 0.1);
   background: rgba(255, 255, 255, 0.86);
-  box-shadow: 0 10px 22px rgba(22, 15, 41, 0.08);
+  box-shadow: 0 8px 18px rgba(22, 15, 41, 0.08);
   cursor: pointer;
 }
 
@@ -133,7 +121,7 @@ a {
 
 .mobile-menu-toggle span {
   display: block;
-  width: 16px;
+  width: 15px;
   height: 2px;
   border-radius: 999px;
   background: var(--navy);
@@ -143,11 +131,11 @@ a {
 }
 
 .mobile-menu-toggle span + span {
-  margin-top: 3px;
+  margin-top: 2px;
 }
 
 .mobile-menu[open] .mobile-menu-toggle span:nth-child(1) {
-  transform: translateY(5px) rotate(45deg);
+  transform: translateY(4px) rotate(45deg);
 }
 
 .mobile-menu[open] .mobile-menu-toggle span:nth-child(2) {
@@ -155,7 +143,7 @@ a {
 }
 
 .mobile-menu[open] .mobile-menu-toggle span:nth-child(3) {
-  transform: translateY(-5px) rotate(-45deg);
+  transform: translateY(-4px) rotate(-45deg);
 }
 
 .mobile-menu-panel {
@@ -171,30 +159,9 @@ a {
   backdrop-filter: blur(16px);
 }
 
-.mobile-nav-links,
 .mobile-menu-actions {
   display: grid;
   gap: 0.65rem;
-}
-
-.mobile-nav-links {
-  padding-bottom: 0.9rem;
-  margin-bottom: 0.9rem;
-  border-bottom: 1px solid rgba(22, 15, 41, 0.08);
-}
-
-.mobile-nav-links a {
-  padding: 0.8rem 0.9rem;
-  border-radius: 16px;
-  color: var(--ink);
-  font-weight: 500;
-  background: rgba(243, 223, 193, 0.24);
-}
-
-.mobile-nav-links a:hover,
-.mobile-nav-links a:focus-visible {
-  background: rgba(54, 143, 139, 0.12);
-  color: var(--teal);
 }
 
 .mobile-menu-actions .button {
@@ -1285,10 +1252,6 @@ footer {
     gap: 0.55rem;
   }
 
-  .nav-links {
-    gap: 1rem;
-    font-size: 0.9rem;
-  }
 }
 
 @media (max-width: 760px) {
@@ -1357,7 +1320,6 @@ footer {
     height: 30px;
   }
 
-  .nav-links,
   .nav-actions {
     display: none;
   }
