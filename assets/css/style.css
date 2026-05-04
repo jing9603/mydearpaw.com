@@ -790,46 +790,19 @@ h1 {
 .why-grid {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-  gap: 1.5rem;
+  gap: 2rem;
   align-items: stretch;
 }
 
 .comparison {
+  width: 100%;
+  max-width: 540px;
   border-radius: 32px;
   background: rgba(255, 255, 255, 0.92);
   border: 1px solid rgba(22, 15, 41, 0.08);
-  padding: 1.4rem;
-  display: grid;
-  gap: 1rem;
+  padding: 1rem;
   box-shadow: var(--shadow);
-}
-
-.comparison-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.comparison-tag,
-.comparison-note {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.55rem 0.9rem;
-  border-radius: 999px;
-  font-size: 0.88rem;
-  font-weight: 600;
-}
-
-.comparison-tag {
-  color: var(--teal);
-  background: rgba(54, 143, 139, 0.1);
-}
-
-.comparison-note {
-  color: var(--muted);
-  background: rgba(243, 223, 193, 0.4);
+  justify-self: start;
 }
 
 .comparison-frame {
