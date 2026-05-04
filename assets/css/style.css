@@ -1466,7 +1466,20 @@ footer {
   }
 
   .hero-visual {
-    min-height: 760px;
+    min-height: auto;
+  }
+
+  .problem-grid {
+    display: block;
+  }
+
+  .problem-grid > .section-heading {
+    margin-bottom: 1.5rem;
+  }
+
+  .problem-grid > .scene-card {
+    width: 100%;
+    clear: both;
   }
 
   .phone {
@@ -1488,8 +1501,11 @@ footer {
   }
 
   .mock-stack {
+    position: relative;
+    inset: auto;
     display: grid;
     align-content: start;
+    gap: 1rem;
   }
 
   .flow-grid,
