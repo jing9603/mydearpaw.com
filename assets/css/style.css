@@ -1131,6 +1131,129 @@ footer {
   color: var(--teal);
 }
 
+.policy-page {
+  padding-top: 5.5rem;
+  padding-bottom: 2rem;
+}
+
+.policy-hero {
+  padding: 1rem 0 0.5rem;
+}
+
+.policy-intro {
+  max-width: 46rem;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.policy-intro h1 {
+  margin-top: 0;
+  font-size: clamp(2.3rem, 5vw, 3.4rem);
+  line-height: 1;
+}
+
+.policy-intro p {
+  margin: 0.65rem 0 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.policy-content-section {
+  padding-top: 0.5rem;
+}
+
+.policy-card {
+  max-width: 54rem;
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.policy-section + .policy-section {
+  margin-top: 1.4rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid rgba(22, 15, 41, 0.08);
+}
+
+.policy-section h2 {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.policy-section p,
+.policy-section li,
+.policy-table {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.policy-section p {
+  margin: 0.7rem 0 0;
+}
+
+.policy-section a {
+  color: var(--teal);
+}
+
+.policy-section a:hover,
+.policy-section a:focus-visible {
+  text-decoration: underline;
+}
+
+.policy-note {
+  font-style: italic;
+}
+
+.policy-stack {
+  display: grid;
+  gap: 0.65rem;
+  margin-top: 0.9rem;
+}
+
+.policy-stack p {
+  margin: 0;
+}
+
+.policy-list {
+  margin: 0.7rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.policy-list li + li {
+  margin-top: 0.4rem;
+}
+
+.policy-table-wrap {
+  margin-top: 0.75rem;
+  overflow-x: auto;
+}
+
+.policy-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+  background: #fff;
+}
+
+.policy-table th,
+.policy-table td {
+  padding: 0.95rem 1rem;
+  border: 1px solid rgba(22, 15, 41, 0.1);
+  text-align: left;
+  vertical-align: top;
+}
+
+.policy-table th {
+  color: var(--ink);
+  background: rgba(243, 223, 193, 0.35);
+  font-weight: 700;
+}
+
 .form-modal {
   position: fixed;
   inset: 0;
@@ -1386,6 +1509,19 @@ footer {
   .footer-meta {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .policy-page {
+    padding-top: 5rem;
+  }
+
+  .policy-card {
+    padding: 0;
+  }
+
+  .policy-section + .policy-section {
+    margin-top: 1.2rem;
+    padding-top: 1.2rem;
   }
 
   .form-modal {
