@@ -673,13 +673,315 @@ h1 {
   background: linear-gradient(90deg, var(--teal), var(--coral));
 }
 
-.flow-grid {
+/* ── How It Works — alternating step rows ─────────────────────────────────── */
+
+.hiw-steps {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 5rem;
+  margin-top: 4rem;
+}
+
+.hiw-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hiw-row--flip {
+  direction: rtl;
+}
+.hiw-row--flip > * {
+  direction: ltr;
+}
+
+/* Step text side */
+.hiw-text {
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
 }
 
-.flow-card,
+.hiw-num {
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(54, 143, 139, 0.25);
+  user-select: none;
+}
+
+.hiw-text h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+  margin: 0;
+  color: var(--ink);
+}
+
+.hiw-text p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0;
+  max-width: 38ch;
+}
+
+/* Visual side */
+.hiw-visual {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.hiw-photo {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: var(--radius-xl);
+  display: block;
+}
+
+/* ── App mockups ─────────────────────────────────────────────────────────── */
+
+.hiw-mockup {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(22, 15, 41, 0.08);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius-xl);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Shared mock parts */
+.mock-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.mock-avatar {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.mock-title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+
+.mock-sub {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 0.15rem;
+}
+
+.mock-btn {
+  background: rgba(22, 15, 41, 0.05);
+  border: 1px solid rgba(22, 15, 41, 0.1);
+  border-radius: 14px;
+  padding: 0.7rem 1.1rem;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.18s;
+}
+
+.mock-btn--teal {
+  background: var(--teal);
+  color: #fff;
+  border-color: var(--teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Log mockup */
+.mock-entries {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mock-entry {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.75rem 1rem;
+  background: var(--mist);
+  border-radius: 14px;
+}
+
+.mock-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.mock-dot--coral { background: var(--coral); }
+.mock-dot--amber { background: #f5a623; }
+.mock-dot--teal  { background: var(--teal); }
+
+.mock-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.mock-time {
+  font-size: 0.775rem;
+  color: var(--muted);
+  margin-top: 0.1rem;
+}
+
+/* Export mockup */
+.mock-doc-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.mock-doc-icon {
+  font-size: 1.5rem;
+  color: var(--teal);
+  flex-shrink: 0;
+}
+
+.mock-badge {
+  margin-left: auto;
+  background: rgba(54, 143, 139, 0.12);
+  color: var(--teal);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.3rem 0.75rem;
+  border-radius: 99px;
+  letter-spacing: 0.03em;
+}
+
+.mock-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-left: 2px solid var(--line);
+  padding-left: 1.25rem;
+  margin-left: 0.25rem;
+}
+
+.mock-tl-row {
+  display: flex;
+  gap: 0.85rem;
+  align-items: baseline;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+
+.mock-tl-row::before {
+  content: "";
+  position: absolute;
+  left: -1.4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--teal);
+  flex-shrink: 0;
+}
+
+.mock-tl-day {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--teal);
+  min-width: 3rem;
+}
+
+.mock-tl-event {
+  font-size: 0.85rem;
+  color: var(--ink);
+}
+
+/* Insight / chart mockup */
+.mock-insight-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 0.01em;
+}
+
+.mock-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  height: 120px;
+  padding: 0 0.5rem;
+}
+
+.mock-bar-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.mock-bar {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background: rgba(54, 143, 139, 0.25);
+  transition: height 0.4s ease;
+}
+
+.mock-bar--peak {
+  background: var(--coral);
+}
+
+.mock-bar--low {
+  background: rgba(54, 143, 139, 0.5);
+}
+
+.mock-bar-label {
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.mock-insight-note {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  background: rgba(248, 112, 96, 0.08);
+  border: 1px solid rgba(248, 112, 96, 0.2);
+  border-radius: 14px;
+  padding: 0.9rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+.mock-insight-note i {
+  color: var(--coral);
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+/* ── Legacy card styles still used elsewhere ──────────────────────────────── */
+
 .concern-card,
 .diff-card,
 .audience-card,
@@ -689,30 +991,6 @@ h1 {
   background: rgba(255, 255, 255, 0.86);
   border: 1px solid rgba(22, 15, 41, 0.08);
   box-shadow: 0 20px 40px rgba(22, 15, 41, 0.06);
-}
-
-.flow-card {
-  display: grid;
-  gap: 1rem;
-  min-height: 340px;
-}
-
-.step-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.step-number {
-  width: 46px;
-  height: 46px;
-  border-radius: 16px;
-  display: grid;
-  place-items: center;
-  background: rgba(54, 143, 139, 0.12);
-  color: var(--teal);
-  font-weight: 700;
 }
 
 .icon-badge {
@@ -725,7 +1003,6 @@ h1 {
   color: var(--coral);
 }
 
-.flow-card h3,
 .diff-card h3,
 .audience-card h3,
 .trust-card h3 {
@@ -734,7 +1011,6 @@ h1 {
   letter-spacing: -0.03em;
 }
 
-.flow-card p,
 .concern-card p,
 .diff-card p,
 .audience-card p,
@@ -745,46 +1021,144 @@ h1 {
   color: var(--muted);
 }
 
-.concern-shell {
+/* ── Breadth — two-column split ───────────────────────────────────────────── */
+
+.breadth-split {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  margin-top: 3.5rem;
 }
 
-.concern-card {
-  min-height: 180px;
-  position: relative;
+/* Column header */
+.breadth-col-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid transparent;
+}
+
+.breadth-col-header--health {
+  color: var(--teal);
+  border-color: rgba(54, 143, 139, 0.3);
+}
+
+.breadth-col-header--behavior {
+  color: var(--coral);
+  border-color: rgba(248, 112, 96, 0.3);
+}
+
+/* Concern chips */
+.concern-chips {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.concern-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.8rem 1rem;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(22, 15, 41, 0.08);
+  border-radius: 14px;
+  font-size: 0.925rem;
+  font-weight: 500;
+  color: var(--ink);
+  transition: transform 0.16s, box-shadow 0.16s;
+}
+
+.concern-chip:hover {
+  transform: translateX(3px);
+  box-shadow: 0 6px 20px rgba(22, 15, 41, 0.08);
+}
+
+.concern-chip i {
+  color: var(--muted);
+  font-size: 0.875rem;
+  flex-shrink: 0;
+}
+
+
+/* ── Breadth guide — character + speech bubble ───────────────────────────── */
+
+.breadth-guide {
+  margin-top: 3.5rem;
+  display: flex;
+  align-items: flex-end;
+  gap: 1.25rem;
+}
+
+.breadth-guide-avatar {
+  flex-shrink: 0;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
   overflow: hidden;
+  border: 3px solid #fff;
+  box-shadow: 0 8px 28px rgba(22, 15, 41, 0.14);
+  position: relative;
+  z-index: 1;
 }
 
-.concern-card::after {
+.breadth-guide-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.breadth-guide-bubble {
+  position: relative;
+  background: #fff;
+  border: 1px solid rgba(22, 15, 41, 0.09);
+  border-radius: 20px 20px 20px 4px;
+  padding: 1.1rem 1.4rem;
+  box-shadow: 0 8px 32px rgba(22, 15, 41, 0.08);
+  max-width: 520px;
+}
+
+/* Speech bubble tail pointing left toward the avatar */
+.breadth-guide-bubble::before {
   content: "";
   position: absolute;
-  width: 110px;
-  height: 110px;
-  right: -18px;
-  bottom: -22px;
-  border-radius: 50%;
-  background: rgba(243, 223, 193, 0.55);
+  left: -10px;
+  bottom: 18px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid rgba(22, 15, 41, 0.09);
+  border-right: 10px solid rgba(22, 15, 41, 0.09);
 }
 
-.concern-card .icon-badge {
-  margin-bottom: 1rem;
+.breadth-guide-bubble::after {
+  content: "";
+  position: absolute;
+  left: -8px;
+  bottom: 19px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid #fff;
+  border-right: 9px solid #fff;
 }
 
-.concern-card h3 {
-  font-family: "Outfit", sans-serif;
-  font-size: 1.05rem;
-  letter-spacing: -0.03em;
-  margin-bottom: 0.5rem;
-}
-
-.breadth-close {
-  max-width: 48rem;
-  margin-top: 1.4rem;
-  font-size: 1.02rem;
-  line-height: 1.75;
-  color: var(--muted);
+.breadth-guide-bubble p {
+  margin: 0;
+  font-size: 0.975rem;
+  line-height: 1.65;
+  color: var(--ink);
 }
 
 .why-grid {
@@ -1384,10 +1758,31 @@ footer {
   }
 
   .flow-grid,
-  .concern-shell,
   .trust-grid,
   .history-board {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .breadth-split {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hiw-row {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hiw-row--flip {
+    direction: ltr;
+  }
+
+  .hiw-num {
+    font-size: 3.5rem;
+  }
+
+  .hiw-photo {
+    height: 280px;
   }
 
   .hero-visual {
@@ -1489,11 +1884,18 @@ footer {
   }
 
   .flow-grid,
-  .concern-shell,
   .trust-grid,
   .history-board,
   .scene-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hiw-steps {
+    gap: 3rem;
+  }
+
+  .hiw-num {
+    font-size: 3rem;
   }
 
   .nav-shell {

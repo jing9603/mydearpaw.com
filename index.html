@@ -213,58 +213,124 @@
             <h2>One place to ask, track, and act.</h2>
           </div>
 
-          <div class="flow-grid">
-            <article class="flow-card">
-              <div class="step-top">
-                <span class="step-number">01</span>
-                <span class="icon-badge"><i class="fa-solid fa-comment-dots"></i></span>
-              </div>
-              <div>
+          <div class="hiw-steps">
+
+            <!-- Step 01 -->
+            <div class="hiw-row">
+              <div class="hiw-text">
+                <span class="hiw-num">01</span>
                 <h3>Ask about what you're seeing</h3>
-                <p>
-                  Describe the concern in plain language and get calm guidance based on your pet's profile and history.
-                </p>
+                <p>Describe the concern in plain language and get calm, context-aware guidance based on your pet's profile and history.</p>
               </div>
-            </article>
+              <div class="hiw-visual">
+                <img src="assets/images/hiw-ask.webp" alt="Pet owner on sofa looking at phone with golden retriever beside her" class="hiw-photo" />
+              </div>
+            </div>
 
-            <article class="flow-card">
-              <div class="step-top">
-                <span class="step-number">02</span>
-                <span class="icon-badge"><i class="fa-solid fa-clipboard-list"></i></span>
-              </div>
-              <div>
+            <!-- Step 02 -->
+            <div class="hiw-row hiw-row--flip">
+              <div class="hiw-text">
+                <span class="hiw-num">02</span>
                 <h3>Track what happens next</h3>
-                <p>
-                  Log symptoms, behaviors, and care actions so the story stays clear.
-                </p>
+                <p>Log symptoms, behaviors, and care actions so the full story stays clear — not scattered across texts and memory.</p>
               </div>
-            </article>
+              <div class="hiw-visual">
+                <div class="hiw-mockup hiw-mockup--log">
+                  <div class="mock-header">
+                    <span class="mock-avatar">🐶</span>
+                    <div>
+                      <div class="mock-title">Poppy's log</div>
+                      <div class="mock-sub">3 entries this week</div>
+                    </div>
+                  </div>
+                  <ul class="mock-entries">
+                    <li class="mock-entry">
+                      <span class="mock-dot mock-dot--coral"></span>
+                      <div>
+                        <div class="mock-label">Vomiting after meals</div>
+                        <div class="mock-time">Today · 8:14 am</div>
+                      </div>
+                    </li>
+                    <li class="mock-entry">
+                      <span class="mock-dot mock-dot--amber"></span>
+                      <div>
+                        <div class="mock-label">Low energy, less playful</div>
+                        <div class="mock-time">Yesterday · 4:30 pm</div>
+                      </div>
+                    </li>
+                    <li class="mock-entry">
+                      <span class="mock-dot mock-dot--teal"></span>
+                      <div>
+                        <div class="mock-label">Refused usual kibble</div>
+                        <div class="mock-time">2 days ago · 7:50 am</div>
+                      </div>
+                    </li>
+                  </ul>
+                  <button class="mock-btn">+ Log another observation</button>
+                </div>
+              </div>
+            </div>
 
-            <article class="flow-card">
-              <div class="step-top">
-                <span class="step-number">03</span>
-                <span class="icon-badge"><i class="fa-solid fa-file-lines"></i></span>
-              </div>
-              <div>
+            <!-- Step 03 -->
+            <div class="hiw-row">
+              <div class="hiw-text">
+                <span class="hiw-num">03</span>
                 <h3>Export a clear timeline</h3>
-                <p>
-                  If you need a vet or trainer, share a clear timeline instead of piecing it together later, especially when symptom timing can change the diagnosis.
-                </p>
+                <p>When you need a vet or trainer, share a structured summary instead of piecing it together on the spot — timing details can change a diagnosis.</p>
               </div>
-            </article>
+              <div class="hiw-visual">
+                <div class="hiw-mockup hiw-mockup--export">
+                  <div class="mock-doc-header">
+                    <i class="fa-solid fa-file-lines mock-doc-icon"></i>
+                    <div>
+                      <div class="mock-title">Vet Summary — Poppy</div>
+                      <div class="mock-sub">May 20 – May 27, 2025</div>
+                    </div>
+                    <span class="mock-badge">Ready</span>
+                  </div>
+                  <div class="mock-timeline">
+                    <div class="mock-tl-row"><span class="mock-tl-day">Day 1</span><span class="mock-tl-event">Vomiting after meals noted</span></div>
+                    <div class="mock-tl-row"><span class="mock-tl-day">Day 3</span><span class="mock-tl-event">Energy decline, less playful</span></div>
+                    <div class="mock-tl-row"><span class="mock-tl-day">Day 5</span><span class="mock-tl-event">Kibble refusal began</span></div>
+                    <div class="mock-tl-row"><span class="mock-tl-day">Day 7</span><span class="mock-tl-event">Export prepared for vet</span></div>
+                  </div>
+                  <button class="mock-btn mock-btn--teal"><i class="fa-solid fa-download"></i> Download PDF</button>
+                </div>
+              </div>
+            </div>
 
-            <article class="flow-card">
-              <div class="step-top">
-                <span class="step-number">04</span>
-                <span class="icon-badge"><i class="fa-solid fa-signal"></i></span>
+            <!-- Step 04 -->
+            <div class="hiw-row hiw-row--flip">
+              <div class="hiw-text">
+                <span class="hiw-num">04</span>
+                <h3>Spot patterns over time</h3>
+                <p>DearPaw connects the dots across logs so you can see what's recurring, what's improved, and what still needs attention.</p>
               </div>
-              <div>
-                <h3>Get more useful insight over time</h3>
-                <p>
-                  Over time, DearPaw helps you spot patterns and make better decisions.
-                </p>
+              <div class="hiw-visual">
+                <div class="hiw-mockup hiw-mockup--insight">
+                  <div class="mock-insight-label">Vomiting frequency · Last 4 weeks</div>
+                  <div class="mock-chart">
+                    <div class="mock-bar-group">
+                      <div class="mock-bar" style="height:30%"></div><span class="mock-bar-label">W1</span>
+                    </div>
+                    <div class="mock-bar-group">
+                      <div class="mock-bar" style="height:65%"></div><span class="mock-bar-label">W2</span>
+                    </div>
+                    <div class="mock-bar-group">
+                      <div class="mock-bar mock-bar--peak" style="height:100%"></div><span class="mock-bar-label">W3</span>
+                    </div>
+                    <div class="mock-bar-group">
+                      <div class="mock-bar mock-bar--low" style="height:20%"></div><span class="mock-bar-label">W4</span>
+                    </div>
+                  </div>
+                  <div class="mock-insight-note">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    Peaks align with diet changes — DearPaw flagged this pattern automatically.
+                  </div>
+                </div>
               </div>
-            </article>
+            </div>
+
           </div>
         </div>
       </section>
@@ -276,45 +342,49 @@
               <i class="fa-solid fa-layer-group"></i>
               What you can ask about
             </span>
-            <h2>For health concerns, behavior concerns, and the overlap between them.</h2>
+            <h2>Health concerns, behavior concerns — and everything in between.</h2>
           </div>
 
-          <div class="concern-shell">
-            <article class="concern-card">
-              <span class="icon-badge"><i class="fa-solid fa-bowl-food"></i></span>
-              <h3>Vomiting frequently</h3>
-              <p>Track episodes, timing, meals, and what changed before it happened.</p>
-            </article>
-            <article class="concern-card">
-              <span class="icon-badge"><i class="fa-solid fa-utensils"></i></span>
-              <h3>Low appetite</h3>
-              <p>Notice patterns across meals, hydration, and overall energy levels.</p>
-            </article>
-            <article class="concern-card">
-              <span class="icon-badge"><i class="fa-solid fa-hand-holding-heart"></i></span>
-              <h3>Skin irritation</h3>
-              <p>Capture scratching, licking, food changes, and flare timing in one record.</p>
-            </article>
-            <article class="concern-card">
-              <span class="icon-badge"><i class="fa-solid fa-house"></i></span>
-              <h3>Peeing indoors after being house-trained</h3>
-              <p>Keep context around accidents, routine shifts, and possible triggers.</p>
-            </article>
-            <article class="concern-card">
-              <span class="icon-badge"><i class="fa-solid fa-dog"></i></span>
-              <h3>Sudden aggression</h3>
-              <p>Log the situation, timing, body language, and preceding changes.</p>
-            </article>
-            <article class="concern-card">
-              <span class="icon-badge"><i class="fa-solid fa-bandage"></i></span>
-              <h3>Constant licking or scratching</h3>
-              <p>See whether a behavior pattern might point back to health-related causes.</p>
-            </article>
+          <div class="breadth-split">
+
+            <div class="breadth-col">
+              <div class="breadth-col-header breadth-col-header--health">
+                <i class="fa-solid fa-heart-pulse"></i>
+                Health
+              </div>
+              <ul class="concern-chips">
+                <li class="concern-chip"><i class="fa-solid fa-bowl-food"></i> Vomiting or nausea</li>
+                <li class="concern-chip"><i class="fa-solid fa-utensils"></i> Low appetite or food refusal</li>
+                <li class="concern-chip"><i class="fa-solid fa-droplet"></i> Drinking more or less than usual</li>
+                <li class="concern-chip"><i class="fa-solid fa-bolt"></i> Lethargy or low energy</li>
+                <li class="concern-chip"><i class="fa-solid fa-hand-holding-heart"></i> Skin irritation or hot spots</li>
+              </ul>
+            </div>
+
+            <div class="breadth-col">
+              <div class="breadth-col-header breadth-col-header--behavior">
+                <i class="fa-solid fa-brain"></i>
+                Behavior
+              </div>
+              <ul class="concern-chips">
+                <li class="concern-chip"><i class="fa-solid fa-house"></i> Peeing indoors after house training</li>
+                <li class="concern-chip"><i class="fa-solid fa-dog"></i> Sudden aggression or snapping</li>
+                <li class="concern-chip"><i class="fa-solid fa-bandage"></i> Constant licking or chewing</li>
+                <li class="concern-chip"><i class="fa-solid fa-moon"></i> Restlessness or pacing at night</li>
+                <li class="concern-chip"><i class="fa-solid fa-volume-high"></i> Excessive barking or whining</li>
+              </ul>
+            </div>
+
           </div>
 
-          <p class="breadth-close">
-            Sometimes a behavior problem is not "just behavior," and sometimes a health concern first shows up as a behavior change.
-          </p>
+          <div class="breadth-guide">
+            <div class="breadth-guide-avatar">
+              <img src="assets/images/breadth-pup.webp" alt="Friendly dog mascot" />
+            </div>
+            <div class="breadth-guide-bubble">
+              <p>These aren't always separate. Constant licking might be anxiety — or allergies. Not eating might be stress — or nausea. I've seen it all. 🐾</p>
+            </div>
+          </div>
         </div>
       </section>
 
