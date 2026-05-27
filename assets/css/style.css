@@ -825,10 +825,17 @@ h1 {
 
 .audience-visual {
   border-radius: 32px;
-  padding: 1.35rem;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(22, 15, 41, 0.08);
+  overflow: hidden;
   box-shadow: var(--shadow);
+  line-height: 0;
+}
+
+.audience-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 32px;
 }
 
 .pet-switcher {
