@@ -1161,40 +1161,152 @@ h1 {
   color: var(--ink);
 }
 
-.why-grid {
+/* ── Why DearPaw ──────────────────────────────────────────────────────────── */
+
+.why-layout {
   display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-  gap: 2rem;
-  align-items: stretch;
+  grid-template-columns: 260px 1fr;
+  gap: 4rem;
+  align-items: center;
 }
 
-.comparison {
-  width: 100%;
-  max-width: 540px;
-  border-radius: 32px;
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(22, 15, 41, 0.08);
-  padding: 1rem;
-  box-shadow: var(--shadow);
-  justify-self: start;
+/* Phone frame */
+.why-phone {
+  display: flex;
+  justify-content: center;
 }
 
-.comparison-frame {
+.why-phone-shell {
+  width: 220px;
+  background: #1b1728;
+  border-radius: 42px;
+  padding: 14px 12px 18px;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.06),
+    0 40px 80px rgba(22, 15, 41, 0.35),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+  position: relative;
+}
+
+.why-phone-notch {
+  width: 72px;
+  height: 26px;
+  background: #1b1728;
+  border-radius: 0 0 18px 18px;
+  margin: 0 auto 8px;
+  position: relative;
+  z-index: 2;
+}
+
+.why-phone-notch::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+}
+
+.why-phone-screen {
+  border-radius: 28px;
   overflow: hidden;
-  border-radius: 24px;
-  border: 1px solid rgba(22, 15, 41, 0.08);
   background: #fff;
 }
 
-.comparison-frame img {
+.why-phone-screen img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-.diff-grid {
+/* Comparison table */
+.diff-table {
   display: grid;
-  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(22, 15, 41, 0.08);
+  box-shadow: 0 16px 48px rgba(22, 15, 41, 0.07);
+  margin-top: 2rem;
+}
+
+.diff-col {
+  padding: 1.5rem;
+}
+
+.diff-col--before {
+  background: rgba(22, 15, 41, 0.03);
+  border-right: 1px solid rgba(22, 15, 41, 0.08);
+}
+
+.diff-col--after {
+  background: rgba(54, 143, 139, 0.05);
+}
+
+.diff-col-label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(22, 15, 41, 0.08);
+}
+
+.diff-col--before .diff-col-label {
+  color: var(--muted);
+}
+
+.diff-col--after .diff-col-label {
+  color: var(--teal);
+}
+
+.diff-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.diff-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.925rem;
+  line-height: 1.5;
+}
+
+.diff-list li::before {
+  flex-shrink: 0;
+  margin-top: 0.1em;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.diff-col--before .diff-list li {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.diff-col--before .diff-list li::before {
+  content: "✕";
+  color: rgba(22, 15, 41, 0.25);
+}
+
+.diff-col--after .diff-list li {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.diff-col--after .diff-list li::before {
+  content: "✓";
+  color: var(--teal);
+  font-weight: 800;
 }
 
 .audience-visual {
@@ -1750,11 +1862,32 @@ footer {
 
   .hero-grid,
   .problem-grid,
-  .why-grid,
   .audience-grid,
   .export-grid,
   .cta-grid {
     grid-template-columns: 1fr;
+  }
+
+  .why-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .why-phone {
+    order: -1;
+  }
+
+  .why-phone-shell {
+    width: 180px;
+  }
+
+  .diff-table {
+    grid-template-columns: 1fr;
+  }
+
+  .diff-col--before {
+    border-right: none;
+    border-bottom: 1px solid rgba(22, 15, 41, 0.08);
   }
 
   .flow-grid,
