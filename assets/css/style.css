@@ -70,9 +70,19 @@ a {
   position: sticky;
   top: 0;
   z-index: 50;
-  backdrop-filter: blur(18px);
-  background: rgba(252, 250, 246, 0.84);
-  border-bottom: 1px solid rgba(22, 15, 41, 0.05);
+  background: transparent;
+  border-bottom: 1.5px solid transparent;
+  box-shadow: none;
+  transition:
+    background 280ms ease,
+    border-color 280ms ease,
+    box-shadow 280ms ease;
+}
+
+.site-header.scrolled {
+  background: #fefcf8;
+  border-bottom-color: rgba(243, 223, 193, 0.75);
+  box-shadow: 0 2px 18px rgba(22, 15, 41, 0.04);
 }
 
 .nav-shell {
@@ -107,47 +117,62 @@ a {
 }
 
 .mobile-menu-toggle {
+  /* Reset summary defaults */
+  appearance: none;
+  -webkit-appearance: none;
   list-style: none;
-  width: 40px;
-  height: 40px;
+  padding: 0;
+  margin: 0;
+
+  width: 36px;
+  height: 36px;
   display: grid;
   place-items: center;
-  border-radius: 12px;
+  border-radius: 50%;
   border: 1px solid rgba(22, 15, 41, 0.1);
   background: rgba(255, 255, 255, 0.86);
-  box-shadow: 0 8px 18px rgba(22, 15, 41, 0.08);
+  box-shadow: 0 4px 12px rgba(22, 15, 41, 0.08);
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 .mobile-menu-toggle::-webkit-details-marker {
   display: none;
 }
 
+/* Stack the 3 lines as a flex column so gap is even */
+.mobile-menu-toggle .hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 .mobile-menu-toggle span {
   display: block;
-  width: 15px;
-  height: 2px;
+  width: 16px;
+  height: 1.5px;
   border-radius: 999px;
   background: var(--navy);
   transition:
-    transform 180ms ease,
-    opacity 180ms ease;
+    transform 200ms ease,
+    opacity 200ms ease;
 }
 
 .mobile-menu-toggle span + span {
-  margin-top: 2px;
+  margin-top: 0; /* gap handled by flex parent */
 }
 
 .mobile-menu[open] .mobile-menu-toggle span:nth-child(1) {
-  transform: translateY(4px) rotate(45deg);
+  transform: translateY(5.5px) rotate(45deg);
 }
 
 .mobile-menu[open] .mobile-menu-toggle span:nth-child(2) {
   opacity: 0;
+  transform: scaleX(0);
 }
 
 .mobile-menu[open] .mobile-menu-toggle span:nth-child(3) {
-  transform: translateY(-4px) rotate(-45deg);
+  transform: translateY(-5.5px) rotate(-45deg);
 }
 
 .mobile-menu-panel {
@@ -1932,8 +1957,8 @@ footer {
 }
 
 @media (max-width: 920px) {
-  .site-header {
-    background: rgba(252, 250, 246, 0.92);
+  .site-header.scrolled {
+    background: #fefcf8;
   }
 
   .nav-shell {
@@ -1961,8 +1986,8 @@ footer {
 }
 
 @media (max-width: 760px) {
-  .site-header {
-    backdrop-filter: blur(14px);
+  .site-header.scrolled {
+    background: #fefcf8;
   }
 
   section {

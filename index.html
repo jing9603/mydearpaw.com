@@ -35,9 +35,11 @@
         </div>
         <details class="mobile-menu">
           <summary class="mobile-menu-toggle" aria-label="Open navigation menu">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
           </summary>
           <div class="mobile-menu-panel">
             <div class="mobile-menu-actions">
@@ -683,6 +685,17 @@
         </div>
       </div>
     </div>
+
+    <script>
+      // Nav: transparent at top, solid on scroll
+      (() => {
+        const header = document.querySelector(".site-header");
+        if (!header) return;
+        const update = () => header.classList.toggle("scrolled", window.scrollY > 10);
+        update();
+        window.addEventListener("scroll", update, { passive: true });
+      })();
+    </script>
 
     <script>
       (() => {
